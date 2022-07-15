@@ -1,0 +1,29 @@
+﻿@model ProductViewModel
+
+<h2>Single Product Information</h2>
+<section>
+    <table border="1" width="500px" style="background-color:cornflowerblue;text-align:center">
+        <tbody>
+            <tr>
+                <td>Id</td>
+                <td>@Model.Id</td>
+            </tr>
+            <tr>
+                <td>Product Name</td>
+                <td>@Model.ProductName</td>
+            </tr>
+            <tr>
+                <td>Product Category</td>
+                <td>@Model.ProductCategory</td>
+            </tr>
+            <tr>
+                <td>Product Price</td>
+                <td>@Model.Price.ToString("C")</td>
+            </tr>
+            <tr>
+                <td>Imported Date</td>
+                <td>@Model.ImportedDate.ToShortDateString()</td>
+            </tr>
+        </tbody>
+    </table>
+</section>

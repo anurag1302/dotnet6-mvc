@@ -1,0 +1,8 @@
+﻿<h1>ViewBag Examples</h1>
+@{
+    var fullName = $"{@ViewBag.FirstName} {@ViewBag.LastName}";
+    var employeeStatus = @ViewBag.IsAContractualEmployee == true ? "contractual employee" : "permanent employee";
+}
+
+<h3>@fullName has been an employee since @ViewBag.CreatedDate123</h3>
+<h4>He is a @employeeStatus</h4>

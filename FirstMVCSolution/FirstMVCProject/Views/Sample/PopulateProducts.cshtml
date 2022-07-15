@@ -1,0 +1,32 @@
+﻿@model BaseProductViewModel
+
+<h2>Products Information</h2>
+
+<p style="background-color:greenyellow">Count of products - <strong>@Model.Count</strong></p>
+<p style="background-color:red">Consolidated Status - <strong>@Model.ConsolidatedStatus</strong></p>
+
+<h3>Delivered Product Details</h3>
+
+<table border="1" width="100%" style="background-color:cornflowerblue;text-align:center">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Product Price</th>
+            <th>Imported Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.ProductName</td>
+                <td>@product.ProductCategory</td>
+                <td>@product.Price.ToString("C")</td>
+                <td>@product.ImportedDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>
