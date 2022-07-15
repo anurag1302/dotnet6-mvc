@@ -1,2 +1,2 @@
 # dotnet6-mvc
-This repo is for .NEt 6 MVC
+This repo is for .NET 6 MVC
