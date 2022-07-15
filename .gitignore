@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/FirstMVCSolution/.vs
+/FirstMVCSolution/FirstMVCProject/bin/Debug/net6.0
+/FirstMVCSolution/FirstMVCProject/obj
+/FirstMVCSolution/FirstMVCProject/FirstMVCProject.csproj.user
+/FirstMVCSolution/FirstMVCProject/bin/Release/net6.0

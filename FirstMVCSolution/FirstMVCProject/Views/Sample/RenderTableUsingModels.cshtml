@@ -1,0 +1,23 @@
+﻿@model IEnumerable<PersonViewModel>
+
+<div class="center">
+    <table border="1" width="500px">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.City</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
