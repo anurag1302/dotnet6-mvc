@@ -1,0 +1,33 @@
+﻿@using static FirstMVCProject.Enums.Enumerations
+@model SelectElementViewModel
+
+<form method="post">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <h3>Dropdown rendered via a list of SelectListItems</h3>
+                <select class="form-control-sm" asp-for="SelectedCountry"
+                        asp-items="@Model.Countries"></select>
+                        <span class="text-danger" asp-validation-for="SelectedCountry"></span>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm">
+                <h3>Dropdown rendered via an Enum</h3>
+                <select class="form-control-sm" asp-for="Category"
+                        asp-items="@Html.GetEnumSelectList<ProductCategory>()">
+                    <option value="">Please Select</option>
+                </select>
+                <span class="text-danger" asp-validation-for="Category"></span>
+            </div>
+        </div>
+        <br />
+        <br />
+        <div class="row">
+            <div class="col-sm">
+                <input type="submit" value="Submit" class="btn btn-primary" />
+            </div>
+        </div>
+    </div>
+</form>
