@@ -6,6 +6,7 @@
 
 <form id="PersonForm" method="post">
     <h4 class="text-center">User Registration Form</h4>
+    <profile-image image-src="/images/cute-cat.jpg" image-height="50" image-width="50" />
     <div class="form-group">
         <label for="firstName">Name</label>
         <input type="text" class="form-control" asp-for="Name">
@@ -29,4 +30,5 @@
         <span asp-validation-for="Orders" class="text-danger font-weight-bold"></span>
     </div>
     <input type="submit" class="btn btn-primary" value="Submit">
+    <profile-image image-src="/images/cute-cat.jpg" image-height="50" image-width="50" />
 </form>
