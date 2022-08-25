@@ -1,12 +1,13 @@
 ﻿@model UserViewModel
 
-@{ 
+@{
     ViewData["Title"] = "User Registration";
 }
 
 <form id="PersonForm" method="post">
     <h4 class="text-center">User Registration Form</h4>
-    <profile-image image-src="/images/cute-cat.jpg" image-height="50" image-width="50" />
+    <profile-image image-src="/images/cute-cat.jpg" image-height="50" image-width="50"
+                   tooltip="This is a cute cat" />
     <div class="form-group">
         <label for="firstName">Name</label>
         <input type="text" class="form-control" asp-for="Name">
@@ -20,9 +21,14 @@
         <span asp-validation-for="Gender" class="text-danger font-weight-bold"></span>
     </div>
     <div class="form-group">
-        <label for="city">City</label>
+        <label for="city">City with Tag Helper</label>
         <input type="text" class="form-control" asp-for="City">
         <span asp-validation-for="City" class="text-danger font-weight-bold"></span>
+    </div>
+    <div class="form-group">
+        <label for="city">City with HTML Helper</label>
+        @Html.TextBoxFor(m=>m.City,new {@class="form-control"})
+        @Html.ValidationMessageFor(m=>m.City, message:"City can't be empty",new {@class="text-danger font-weight-bold"})
     </div>
     <div class="form-group">
         <label for="order">Orders</label>

@@ -1,7 +1,8 @@
 ﻿@model AddProductViewModel
 
 <form method="post">
-    <profile-image image-src="/images/cute-cat.jpg" image-height="50" image-width="50" />
+    <profile-image image-src="/images/cute-cat.jpg" 
+    image-height="100" image-width="100" tooltip="This is a cute cat" />
     <div class="mb-3">
         <label for="productName">Product Name</label>
         <input type="text" class="form-control" placeholder="Enter Product Name" asp-for="ProductName">

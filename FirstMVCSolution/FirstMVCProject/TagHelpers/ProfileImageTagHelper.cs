@@ -8,6 +8,7 @@ namespace FirstMVCProject.TagHelpers
         public string ImageSrc { get; set; }
         public int ImageWidth { get; set; }
         public string ImageHeight { get; set; }
+        public string Tooltip { get; set; }
 
         public override void Process(TagHelperContext context, TagHelperOutput output)
         {
@@ -17,6 +18,7 @@ namespace FirstMVCProject.TagHelpers
             output.Attributes.Add("height", ImageHeight);
             output.Attributes.Add("width", ImageWidth);
             output.Attributes.Add("style", "border-radius:50%");
+            output.Attributes.Add("title", Tooltip);
         }
     }
 }
