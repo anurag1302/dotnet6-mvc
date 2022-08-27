@@ -34,5 +34,39 @@ namespace FirstMVCProject.Data
                 }
             };
         }
+
+        public static IReadOnlyList<CommentViewModel> GetComments()
+        {
+            return new List<CommentViewModel>
+            {
+                new CommentViewModel
+                {
+                    Id=101,
+                    Name="John Simmons",
+                    Email="john@test.com",
+                    IpAddress="192.23.45.89",
+                    Comment="The post is good, got a lot to learn!!!",
+                    CommentedDateTime=DateTime.UtcNow.AddYears(-2)
+                },
+                new CommentViewModel
+                {
+                    Id=102,
+                    Name="Mary Jane",
+                    Email="mary@gmail.com",
+                    IpAddress="104.23.11.102",
+                    Comment="Learnt partial views, thanks !!!",
+                    CommentedDateTime=DateTime.UtcNow.AddMonths(-5)
+                },
+                new CommentViewModel
+                {
+                    Id=103,
+                    Name="Dev Singh",
+                    Email="dev@aol.com",
+                    IpAddress="112.12.00.67",
+                    Comment="This post needs more code snippets, Thanks !!!",
+                    CommentedDateTime=DateTime.UtcNow.AddDays(-14)
+                }
+            };
+        }
     }
 }

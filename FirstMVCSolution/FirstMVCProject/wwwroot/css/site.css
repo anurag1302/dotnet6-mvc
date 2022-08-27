@@ -1,18 +1,43 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 @media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    html {
+        font-size: 16px;
+    }
 }
 
 html {
-  position: relative;
-  min-height: 100%;
+    position: relative;
+    min-height: 100%;
 }
 
 body {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.stats-container {
+    border: 1px solid black;
+    width: 50%;
+    background-color: #a0cbda;
+    margin: 5px;
+    padding: 5px;
+}
+
+.comments-container {
+    border: 1px solid black;
+    width: 50%;
+    background-color: #DDA0DD;
+    margin: 5px;
+    padding: 5px;
+}
+
+.comments-item {
+    font-weight: bold;
+    text-align: center
+}
+
+#products-container {
+    margin-top: 20px;
 }

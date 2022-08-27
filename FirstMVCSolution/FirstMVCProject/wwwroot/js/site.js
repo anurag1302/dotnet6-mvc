@@ -18,4 +18,19 @@
             }
         );
     });
+
+    $('#btnGetProducts').on('click', () => {
+        $.ajax(
+            {
+                url: '/Product/GetProducts',
+                type: 'GET',
+                success: function (response) {
+                    $('#products-container').html('');
+                    $('#products-container').html(response);
+                },
+                error: function (xhr) {
+                    console.log(xhr);
+                }
+            });
+    });
 });

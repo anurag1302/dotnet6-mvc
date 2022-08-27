@@ -1,0 +1,33 @@
+﻿@{
+    Layout = null;
+}
+@model IEnumerable<CommentViewModel>
+
+<h3>Comments Information</h3>
+
+@foreach (var item in Model)
+{
+    <div class="comments-container">
+        <div class="comments-item">
+            @item.Name
+        </div>
+        <div class="comments-item">
+            @item.Email
+        </div>
+        <div class="comments-item">
+            @item.Comment
+        </div>
+        <div class="comments-item">
+            @item.IpAddress
+        </div>
+        <div class="comments-item">
+            @item.CommentedDateTime.Value.ToShortDateString()
+        </div>
+        <br/>
+        <div class="text-center">
+            <button class="btn btn-primary">Approve</button>
+            <button class="btn btn-dark">Mark as Spam</button>
+        </div>
+    </div>
+}
+

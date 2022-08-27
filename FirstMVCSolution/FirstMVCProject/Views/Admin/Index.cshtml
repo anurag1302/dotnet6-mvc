@@ -1,0 +1,22 @@
+﻿@model AdminDashboardViewModel
+
+<h3>Page Stats</h3>
+
+<div class="stats-container">
+    <div class="comments-item">
+        Number of Pages : @Model.NoOfPages
+    </div>
+    <div class="comments-item">
+        Number of Posts : @Model.NoOfPosts
+    </div>
+    <div class="comments-item">
+        Page Views : @Model.TotalViews
+    </div>
+    <br/>
+    <div class="text-center">
+        <button class="btn btn-primary">Export to Excel</button>
+        <button class="btn btn-primary">Export to PDF</button>
+    </div>
+</div>
+<br/>
+<partial name="_CommentsDetailsPartial" model="@Model.Comments" />

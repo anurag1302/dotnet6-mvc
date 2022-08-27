@@ -1,4 +1,5 @@
-﻿using FirstMVCProject.Models;
+﻿using FirstMVCProject.Data;
+using FirstMVCProject.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
@@ -103,6 +104,17 @@ namespace FirstMVCProject.Controllers
             var selectedCategory = model.Category;
 
             return Content("Form successfully posted!!!");
+        }
+
+        public IActionResult Products()
+        {
+            return View();
+        }
+
+        public IActionResult GetProducts()
+        {
+            var model = Repository.GetProducts();
+            return PartialView("_ProductsPartial", model);
         }
 
         private IEnumerable<SelectListItem> GetCountries()

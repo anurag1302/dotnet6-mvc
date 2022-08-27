@@ -1,0 +1,28 @@
+﻿@{
+    Layout = null;
+}
+@model IEnumerable<ProductViewModel>
+
+<table border="1" width="100%" style="background-color:bisque;text-align:center">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Product Name</th>
+            <th>Product Category</th>
+            <th>Product Price</th>
+            <th>Imported Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.Id</td>
+                <td>@product.ProductName</td>
+                <td>@product.ProductCategory</td>
+                <td>@product.Price.ToString("C")</td>
+                <td>@product.ImportedDate.ToShortDateString()</td>
+            </tr>
+        }
+    </tbody>
+</table>

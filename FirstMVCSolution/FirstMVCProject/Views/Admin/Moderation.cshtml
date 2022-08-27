@@ -1,0 +1,16 @@
+﻿@model AdminModerationViewModel
+
+<h2>Admin Moderation Page</h2>
+
+<table border="1" width="50%" style="text-align:center; background-color:aliceblue">
+    <tr>
+        <td>No of Page Updates</td>
+        <td>@Model.NoOfPageUpdates</td>
+    </tr>
+    <tr>
+        <td>Last Moderated On</td>
+        <td>@Model.LastUpdatedOn.ToShortDateString()</td>
+    </tr>
+</table>
+
+<partial name="_CommentsDetailsPartial" model="@Model.Comments" />
